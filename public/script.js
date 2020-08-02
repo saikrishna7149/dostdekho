@@ -5,14 +5,11 @@ const videoGrid = document.getElementById('video-grid')
 //   port: '3001'
 // })
 
-// var myPeer = new Peer(undefined, {
-//   secure: true, 
-//   host: 'dostdekho.herokuapp.com/', 
-//   port: 9000,
-//   path:'/'
-// });
-// var myPeer = new Peer({　host:'dostdekho.herokuapp.com', secure:true, port:443, key: 'peerjs', debug: 3})
-var myPeer = new Peer('', {host: 'dostdekho.herokuapp.com', port: 9000});
+var myPeer = new Peer(undefined, {
+  secure: true, 
+  host: 'peerjs-server.herokuapp.com', 
+  port: 443,
+});
 
 const myVideo = document.createElement('video')
 myVideo.muted = true
