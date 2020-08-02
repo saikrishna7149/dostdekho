@@ -5,9 +5,9 @@ const videoGrid = document.getElementById('video-grid')
 //   port: '3001'
 // })
 
-var peer = new Peer(undefined, {
+var myPeer = new Peer(undefined, {
   secure: true, 
-  host: 'https://dostdekho.herokuapp.com/', 
+  host: 'dostdekho.herokuapp.com/', 
   port: 443,
 });
 
