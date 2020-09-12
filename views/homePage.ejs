@@ -4,72 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sai's Room</title>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.1/peerjs.min.js"></script>
-    <script src="/socket.io/socket.io.js" defer></script>
-    <!--  <script src="script.js" defer></script> -->
-    <script src="other.js" defer></script>
     <title>DostDekho</title>
-    <style>
-        /* Split the screen in half */
-        .split {
-            height: 100%;
-            width: 70%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
-        }
 
-        /* Control the left side */
-        .left {
-            left: 0;
-        }
+    <script src="landing.js" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
 
-        /* Control the right side */
-        .right {
-            right: 0;
-        }
 
-        /* If you want the content centered horizontally and vertically */
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Grandstander:wght@500&display=swap" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="container-fluid" style="font-family: 'Grandstander', cursive;">
     <div class="row">
-        <div class="split left">
-            <div class="left">
-                <img src="Banner.svg" alt="brandLogo">
-            </div>
+        <div class="col-md-4 center-image d-none d-md-block">
+            <img src="/Images/Banner.svg" alt="brandLogo">
         </div>
 
-        <div class="split right">
-            <h2>Feeling Bored or working with Team?</h2>
-            <p
-                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
-                Do not worry. Use our free video calling app and talk to your friends or join a meeting.
-            </p>
-            <button id="Meet_Now" onclick="Meetnow()">Start a Meeting</button>
-            <p>OR</p>
-            <label for="inp_Join">Have a Code:</label>
-            <input id="inp_Join"></input>
-            <button id="Meet_Now" onclick="Join()">Enter</button>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row">
-                <span><a href="https://stories.freepik.com/">Illustration by Freepik Stories</a></span>
+        <div class="col-xs-12 col-sm-12 col-md-8">
+            <div class="container">
+                <h2>Feeling Bored or working with Team?</h2>
+                <p style="font-family: 'Comfortaa', cursive">
+                    Do not worry. Use our free video calling app and talk to your friends or join a meeting.
+                </p>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-5">
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Create Room</h5>
+                                <p class="card-text">Dont have a meeting room yet! why waiting... </p>
+                                <button type="button" class="btn btn-primary" id="Meet_Now" onclick="Meetnow()">Create a Room</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-7">
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Join a Meeting</h5>
+                                <p class="card-text">My friend already created a room. Why waiting?</p>
+                                <label for="inp_Join">Enter Room Id</label>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" id="inp_Join" placeholder="Enter the Room ID">
+                                </div>
+                                <button type="button" class="btn btn-success" id="Meet_Now" onclick="Join()">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <footer class="footer mt-auto py-3">
 
+        <div class="container" style="text-align: center;">
+            <span class="text-muted">Developed Purely for Fun with AMIGOS.<span class="d-none d-md-block">
+                <a href="https://stories.freepik.com/">Illustration by Freepik Stories</a>
+            </span></span>
+        </div>
+    </footer>
 </body>
