@@ -1,4 +1,4 @@
-# dekhdosth
+# DostDekho
 
 dostdekho.herokuapp.com is a free videocall application developed without to run without any external applications.
 
