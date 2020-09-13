@@ -6,30 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DostDekho</title>
 
-    <script src="landing.js" defer></script>
+    <script src="/js/landing.js" defer></script>
     <script src="/socket.io/socket.io.js" defer></script>
-
-
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Grandstander:wght@500&display=swap" rel="stylesheet">
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="container-fluid" style="font-family: 'Grandstander', cursive;">
-    <div class="row">
-        <div class="col-md-4 center-image d-none d-md-block">
-            <img src="/images/Banner.svg" alt="brandLogo">
-        </div>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/images/Logo.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> DostDekho
+        </a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 center-image d-none d-md-block">
+                <img src="/images/background-video.svg" alt="brandLogo">
+            </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-8">
-            <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-8">
                 <h2>Feeling Bored or working with Team?</h2>
                 <p style="font-family: 'Comfortaa', cursive">
                     Do not worry. Use our free video calling app and talk to your friends or join a meeting.
                 </p>
                 <div class="row">
                     <div class="col-xs-4 col-sm-5">
-                        <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Create Room</h5>
                                 <p class="card-text">Dont have a meeting room yet! why waiting... </p>
@@ -38,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-xs-8 col-sm-7">
-                        <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card mx-auto">
                             <div class="card-body">
                                 <h5 class="card-title">Join a Meeting</h5>
                                 <p class="card-text">My friend already created a room. Why waiting?</p>
@@ -54,12 +57,13 @@
             </div>
         </div>
     </div>
-    <footer class="footer mt-auto py-3">
-
+    <footer class="footer fixed-bottom mt-auto">
         <div class="container" style="text-align: center;">
-            <span class="text-muted">Developed Purely for Fun with AMIGOS.<span class="d-none d-md-block">
-                <a href="https://stories.freepik.com/">Illustration by Freepik Stories</a>
-            </span></span>
+            <span class="text-muted">Developed Purely for Fun with AMIGOS.</span>
+            <span class="d-none d-md-block">
+                <a href="https://stories.freepik.com/">Illustration by Freepik Stories</a> &nbsp and
+                <a href="https://logomakr.com/">Logo created at LogoMakr.com</a>
+            </span>
         </div>
     </footer>
 </body>
