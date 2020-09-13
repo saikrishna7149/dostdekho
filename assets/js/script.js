@@ -1,6 +1,5 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
-
 var myPeer = new Peer(undefined, {
     secure: true,
     host: 'peerjs-server.herokuapp.com',
@@ -38,6 +37,8 @@ myPeer.on('open', id => {
 })
 
 function connectToNewUser(userId, stream) {
+    // if (!userId === null) {
+    console.log('userConnected')
     const call = myPeer.call(userId, stream)
     const video = document.createElement('video')
     call.on('stream', userVideoStream => {
@@ -46,8 +47,8 @@ function connectToNewUser(userId, stream) {
     call.on('close', () => {
         video.remove()
     })
-
     peers[userId] = call
+        // }
 }
 
 function addVideoStream(video, stream) {
@@ -56,4 +57,8 @@ function addVideoStream(video, stream) {
         video.play()
     })
     videoGrid.append(video)
+}
+
+function endMeeting() {
+
 }
