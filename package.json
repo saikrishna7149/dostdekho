@@ -19,6 +19,6 @@
     "xmlhttprequest-ssl": ">=1.6.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.14"
   }
 }
